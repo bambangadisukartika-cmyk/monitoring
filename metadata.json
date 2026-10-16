@@ -1,0 +1,8 @@
+{
+  "name": "Dashboard Monitoring Pengiriman & Stok PT. MBP",
+  "description": "Sistem pemantauan pesanan belum kirim dan titipan stok PT. MBP ",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

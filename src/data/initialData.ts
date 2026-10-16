@@ -1,0 +1,196 @@
+import { DashboardData } from '../types/dashboard';
+
+export const initialDashboardData: DashboardData = {
+  title: "Sistem Pemantauan Pesanan Belum Kirim & Titipan Stok PT. MBG",
+  subtitle: "Dashboard Monitoring Pengiriman & Stok © 2026 PT. MBG",
+  lastUpdated: new Date().toISOString(),
+  warehouseStatus: "Status Gudang Active",
+  deliverySectionTitle: "BELUM KIRIM",
+  deliveryGroups: [
+    {
+      id: "shopee-mt-12-10",
+      title: "SHOPEE MT 12/10",
+      items: [
+        {
+          id: "item-1",
+          name: "Expo 770 hitam",
+          orderNumber: "2610107PDQBYWE",
+          courier: "J&T",
+          isKayu: true,
+          isTerlambat: true,
+          notes: ""
+        },
+        {
+          id: "item-2",
+          name: "Ks 10000",
+          orderNumber: "261012EESPK9JF",
+          courier: "J&T",
+          isKayu: false,
+          isTerlambat: true,
+          notes: ""
+        }
+      ]
+    },
+    {
+      id: "shopee-mt-13-10",
+      title: "SHOPEE MT 13/10",
+      items: [
+        {
+          id: "item-3",
+          name: "Tf 1000sn",
+          orderNumber: "261012EN9JDAMF",
+          courier: "J&T",
+          isKayu: true,
+          isTerlambat: false,
+          notes: ""
+        }
+      ]
+    },
+    {
+      id: "shopee-mt-14-10",
+      title: "SHOPEE MT 14/10",
+      items: [
+        {
+          id: "item-4",
+          name: "Rtw 120l 5ch",
+          orderNumber: "261013HHTMPPBT",
+          courier: "J&T",
+          isKayu: true,
+          isTerlambat: false,
+          notes: ""
+        },
+        {
+          id: "item-5",
+          name: "102g",
+          orderNumber: "261014JSY25EDE",
+          courier: "J&T",
+          isKayu: true,
+          isTerlambat: false,
+          notes: ""
+        },
+        {
+          id: "item-6",
+          name: "Ysn st6 & gm dz 400",
+          orderNumber: "261014JUQP24F0",
+          courier: "J&T",
+          isKayu: false,
+          isTerlambat: false,
+          notes: ""
+        },
+        {
+          id: "item-7",
+          name: "Cf 310",
+          orderNumber: "261014JYMXDMHD",
+          courier: "JNE",
+          isKayu: false,
+          isTerlambat: false,
+          notes: ""
+        },
+        {
+          id: "item-8",
+          name: "Cf 460",
+          orderNumber: "261014K9K0YS7W",
+          courier: "JNE",
+          isKayu: true,
+          isTerlambat: false,
+          notes: ""
+        }
+      ]
+    },
+    {
+      id: "shopee-tangsel-14-10",
+      title: "SHOPEE TANGSEL 14/10",
+      items: [
+        {
+          id: "item-9",
+          name: "12ssgce",
+          orderNumber: "261014JQS4SR3Y",
+          courier: "JNE",
+          isKayu: true,
+          isTerlambat: false,
+          notes: ""
+        }
+      ]
+    }
+  ],
+  stockSectionTitle: "STOK TANGERANG TITIP DI PT. MBG",
+  stockItems: [
+    {
+      id: "stock-1",
+      name: "Gm dh3p",
+      quantity: 1,
+      notes: "🛠️ Perlu di perbaiki",
+      highlightType: "danger"
+    },
+    {
+      id: "stock-2",
+      name: "Wk 120",
+      quantity: 2,
+      notes: "-",
+      highlightType: "normal"
+    },
+    {
+      id: "stock-3",
+      name: "Wk 150",
+      quantity: 1,
+      notes: "-",
+      highlightType: "normal"
+    },
+    {
+      id: "stock-4",
+      name: "Xs 110",
+      quantity: 1,
+      notes: "-",
+      highlightType: "normal"
+    },
+    {
+      id: "stock-5",
+      name: "Loyang 3cm gomesin",
+      quantity: 91,
+      notes: "-",
+      highlightType: "normal"
+    },
+    {
+      id: "stock-6",
+      name: "Loyang 3cm chefprimax",
+      quantity: 16,
+      notes: "🔥 Utamakan habiskan ini",
+      highlightType: "warning"
+    },
+    {
+      id: "stock-7",
+      name: "De 08a",
+      quantity: 1,
+      notes: "-",
+      highlightType: "normal"
+    },
+    {
+      id: "stock-8",
+      name: "Ruby 200",
+      quantity: 2,
+      notes: "-",
+      highlightType: "normal"
+    },
+    {
+      id: "stock-9",
+      name: "Ruby 240",
+      quantity: 1,
+      notes: "-",
+      highlightType: "normal"
+    },
+    {
+      id: "stock-10",
+      name: "Gsp 650",
+      quantity: 1,
+      notes: "-",
+      highlightType: "normal"
+    },
+    {
+      id: "stock-11",
+      name: "Ab 108",
+      quantity: 3,
+      notes: "💳 13/10 mbg belum bayar 1 unit",
+      highlightType: "danger"
+    }
+  ]
+};

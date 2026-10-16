@@ -1,0 +1,132 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(52, 211, 153, 0.4);
+  }
+  50% {
+    opacity: 0.85;
+    transform: scale(1.05);
+    box-shadow: 0 0 0 6px rgba(52, 211, 153, 0);
+  }
+}
+
+@keyframes badgeShimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.anim-delay-1 { animation-delay: 0.08s; opacity: 0; }
+.anim-delay-2 { animation-delay: 0.16s; opacity: 0; }
+.anim-delay-3 { animation-delay: 0.24s; opacity: 0; }
+.anim-delay-4 { animation-delay: 0.32s; opacity: 0; }
+
+.live-pulse-dot {
+  animation: pulseGlow 2.2s infinite ease-in-out;
+}
+
+.card-hover-fx {
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.card-hover-fx:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.08), 0 8px 10px -6px rgba(15, 23, 42, 0.04);
+}
+
+/* Animasi Terlambat (Warning Heartbeat & Glowing Pulse) */
+@keyframes warningPulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.4);
+  }
+  50% {
+    transform: scale(1.04);
+    box-shadow: 0 0 0 4px rgba(239, 68, 68, 0);
+  }
+}
+
+.anim-terlambat {
+  animation: warningPulse 1.8s infinite ease-in-out;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Animasi Kayu (Subtle Rocking / Swaying Wood Motion) */
+@keyframes woodSway {
+  0%, 100% {
+    transform: rotate(0deg) translateY(0);
+  }
+  25% {
+    transform: rotate(-3.5deg) translateY(-0.5px);
+  }
+  75% {
+    transform: rotate(3.5deg) translateY(0.5px);
+  }
+}
+
+.anim-kayu {
+  animation: woodSway 2.4s infinite ease-in-out;
+  display: inline-flex;
+  align-items: center;
+  transform-origin: center;
+}
+
+/* Animasi Perbaikan Tool */
+@keyframes toolRock {
+  0%, 100% { transform: rotate(0deg); }
+  50% { transform: rotate(-8deg); }
+}
+
+.anim-repair {
+  animation: toolRock 2s infinite ease-in-out;
+  display: inline-flex;
+  align-items: center;
+}
+
+/* Animasi Api Prioritas */
+@keyframes flameFlicker {
+  0%, 100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-1.5px) scale(1.05); }
+}
+
+.anim-flame {
+  animation: flameFlicker 1.4s infinite ease-in-out;
+  display: inline-flex;
+  align-items: center;
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  body {
+    background: white !important;
+  }
+}
